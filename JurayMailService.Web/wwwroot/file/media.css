@@ -1,0 +1,65 @@
+/****************************
+    - Responsive styles -
+****************************/
+@media only screen and (max-width:680px) {
+	h1 {
+		font-size:36px;
+	}
+	
+	.countdown-amount {
+		font-size:48px;
+	}
+	
+	#main .modal-toggle {
+		position:relative;
+		top:0;
+		right:0;
+		margin:28px auto 0;
+	}
+	
+	#main .modal-toggle:hover {
+		right:0;
+	}
+}
+
+@media only screen and (max-width:540px) {
+	.one-half {
+		width:100%;
+	}	
+}
+
+@media only screen and (max-width:480px) {
+	h1 {
+		font-size:30px;
+	}
+	
+	.countdown-section {
+		padding:1px 6px 6px;
+	}
+	
+	.countdown-amount {
+		font-size:42px;
+	}
+	
+	#newsletter-form .form-field {
+		margin:0 0 14px;
+	}
+	
+	#newsletter-form .form-submit {
+		position:static;
+		margin:0 auto;		
+		right:auto;
+		top:auto;
+	}
+}
+
+@media only screen and (max-width:360px) {
+	.countdown-section {
+		font-size:10px;
+		padding:0 6px 3px;
+	}
+	
+	.countdown-amount {
+		font-size:36px;
+	}
+}

@@ -1,0 +1,641 @@
+/* ==============================================================
+
+Project: 	Selene - Responsive Coming Soon Template
+Info:		https://themeforest.net/item/selene-responsive-coming-soon-template/19231691
+Version: 	1.0
+Author:		AthenaStudio
+Profile:	https://themeforest.net/user/athenastudio
+
+-----------------------------------------------------------------
+					*** TABLE OF CONTENTS ***
+-----------------------------------------------------------------
+
+	1.	General
+	2.	Clear floats
+	3.	Grid
+	4.	Form
+	5.	Placeholder
+	6.	Responsive images
+	7.	Custom text styles
+	8.	Icons
+	9.	Page loader
+	10.	Basic structure
+	11.	Background overlay
+	12.	Logo
+	13.	Countdown
+	14.	Newsletter
+	15.	Social
+	16.	Modal toggle
+	17.	Modal / About
+	18.	No JS
+		
+=============================================================*/
+
+/*********************
+    - 1. General -
+*********************/
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+	display:block;
+}
+
+audio, canvas, video {
+	display:inline-block;
+}
+
+audio:not([controls]) {
+	display:none;
+	height:0;
+}
+
+[hidden] {
+	display:none;
+}
+
+html {
+	font-size:100%;
+	-webkit-font-smoothing:antialiased;
+	-webkit-text-size-adjust:100%;
+		-ms-text-size-adjust:100%;	
+}
+
+html, body {
+	height:100%;
+}
+
+html, button, input, textarea {
+	font-family:'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+body {
+	font-family:'Open Sans', Helvetica, Arial, sans-serif;
+	color:#dadada;
+	line-height:1.75;
+	margin:0;
+}
+
+a {
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+a:active, a:focus, a:hover {
+	outline:0;
+}
+
+h1, h2, h3, h4 {
+	color:#fff;
+	font-weight:400;
+	line-height:1.16667;
+	margin:0 0 28px;
+	text-align:center;
+}
+
+h1 {
+	font-size:40px;
+	text-transform:uppercase;
+}
+
+h2 {
+	font-size:30px;
+}
+
+h3 {
+	font-size:24px;
+}
+
+h4 {
+	font-size:18px;
+}
+
+b, strong {
+	font-weight:700;
+}
+
+i, em {
+	font-style:italic;
+}
+
+p {
+	margin:0 0 28px;
+}
+
+ul, ol {
+	margin:0 0 28px;
+	padding:0 0 0 24px;
+}
+
+ul {
+	list-style:disc;
+}
+
+ol {
+	list-style:decimal;
+}
+
+blockquote, q {
+	quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content:"";
+	content:none;
+}
+
+img {
+	border:0;
+	vertical-align:middle;
+	-ms-interpolation-mode:bicubic;
+}
+
+form {
+	margin:0;
+}
+
+button, input, textarea {
+	border-radius:0;
+	font-size:14px;
+	margin:0;
+	max-width:100%;
+	vertical-align:baseline;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+			box-sizing:border-box;
+}
+
+button, input {
+	line-height:normal;
+}
+
+button, input[type="submit"] {
+	-webkit-appearance:button;
+	cursor:pointer;
+}
+
+textarea {
+	overflow:auto;
+	vertical-align:top;
+}
+
+/**************************
+    - 2. Clear floats -
+**************************/
+.row:afterr { 
+	clear:both; 
+}
+
+.row:before, .row:after { 
+	content:""; 
+	display:table; 
+}
+
+/******************
+    - 3. Grid -
+******************/
+.row {
+	margin-left:-48px;
+}
+
+.one-half {
+	float:left;
+	padding-left:48px;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+			box-sizing:border-box;
+}
+
+.one-half {
+	width:50%;
+}
+
+/******************
+    - 4. Form -
+******************/
+input {
+	background:#6e6e6e;
+	background:rgba(169,169,169,0.3);
+	border:1px solid #6e6e6e;
+	color:#fff;
+	font-weight:700;
+	letter-spacing:1px;
+	padding:6px 12px;
+	text-transform:uppercase;
+	-webkit-border-raius:3px 0 0 3px;
+	   -moz-border-raius:3px 0 0 3px;
+			border-raius:3px 0 0 3px;
+}
+
+input:focus {
+	outline:0;
+}
+
+button, input[type="submit"] {
+	-webkit-transition:all 0.3s;
+	   -moz-transition:all 0.3s;
+			transition:all 0.3s;
+}
+
+button:hover, button:focus,
+input[type="submit"]:focus, input[type="submit"]:hover {
+	color:#dadada;
+	outline:0;
+}
+
+.form-field {
+	position:relative;
+}
+
+.form-field label {
+	font-size:14px;
+}
+
+.form-field span.error {
+	position:absolute;
+	top:45px;
+	color:#fff;
+	font-size:10px;
+	padding:2px 10px;
+	text-transform:uppercase;
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+			border-radius:3px;
+}
+
+.form-wrap .success {
+	color:#dadada;
+	min-height:42px;
+	text-align:center;
+}
+
+/*************************
+    - 5. Placeholder -
+*************************/
+::-webkit-input-placeholder {
+	color:#a9a9a9;
+}
+
+::-moz-placeholder {
+	color:#a9a9a9;
+	opacity:1;
+}
+
+.placeholder {
+	color:#a9a9a9;
+}
+
+/*******************************
+    - 6. Responsive images -
+*******************************/
+.wrap img {
+	height:auto;
+	max-width:100%;
+}
+
+/********************************
+    - 7. Custom text styles -
+********************************/
+h1.title > span {
+	font-weight:700;
+}
+
+.slogan {
+	font-size:14px;
+	text-align:center;
+}
+
+.subtitle {
+	font-size:14px;
+	letter-spacing:1px;
+	margin:28px 0;
+	text-align:center;
+	text-transform:uppercase;
+}
+
+.row h2 {
+	font-size:24px;
+	margin-bottom:14px;
+	text-align:left;
+}
+
+/*******************
+    - 8. Icons -
+*******************/
+.social a, 
+.modal-toggle i {
+	color:#f7f7f7;
+	display:inline-block;
+	font-size:18px;
+	width:36px;
+	height:36px;
+	line-height:36px;
+	text-align:center;
+	text-decoration:none;
+	-webkit-transition:all 0.3s ease;
+	   -moz-transition:all 0.3s ease;
+			transition:all 0.3s ease;
+}
+
+.row h2 i {
+	font-size:18px;
+	line-height:1.55556;
+	margin-right:10px;
+}
+
+/*************************
+    - 9. Page loader -
+*************************/
+.page-loader {
+	position:fixed;
+	display:block;
+	width:100%;
+	height:100%;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+	z-index:998;
+	background:#fff;
+}
+
+.page-loader .progress {
+	margin:-12em 0 0 -12em;
+	width:50px;
+	height:50px;
+	font-size:2px;
+	position:absolute;
+	text-indent:-9999em;
+	top:50vh;
+	left:50vw;
+	background:#fff;
+	border-top:0.8em solid rgba(35, 35, 35, 0.2);
+	border-right:0.8em solid rgba(35, 35, 35, 0.2);
+	border-bottom:0.8em solid rgba(35, 35, 35, 0.2);
+	border-left:0.8em solid #000;
+	-webkit-transform:translateZ(0);
+	   -moz-transform:translateZ(0);
+			transform:translateZ(0);
+	-webkit-animation:preloader 0.7s infinite linear;
+	   -moz-animation:preloader 0.7s infinite linear;
+			animation:preloader 0.7s infinite linear;
+}
+
+.page-loader .progress,  .page-loader .progress:after {
+	border-radius:50%;
+	width:24em;
+	height:24em;
+}
+
+.page-loader.overlay {
+	background:rgba(0, 0, 0, 0.5);
+}
+
+.page-loader.overlay .progress {
+	background:transparent;	
+}
+
+@keyframes preloader {
+ 	0% {
+ 		-webkit-transform:rotate(0deg);
+ 		   -moz-transform:rotate(0deg);
+ 				transform:rotate(0deg);
+	}
+	
+ 	100% {
+ 		-webkit-transform:rotate(360deg);
+ 		   -moz-transform:rotate(360deg);
+ 				transform:rotate(360deg);
+	}
+}
+
+/******************************
+    - 10. Basic structure -
+******************************/
+.wrap {
+	position:relative;
+	min-height:100%;
+	z-index:99;
+}
+
+.inner {
+	margin:0 auto;
+	padding:42px 24px;
+}
+
+#main {
+	position:relative;
+}
+
+#main .inner {
+	max-width:816px;
+	padding-bottom:84px;
+	padding-top:84px;
+}
+
+/*********************************
+    - 11. Background overlay -
+*********************************/
+.body-bg {	background:rgba(0,0,0,0.5) url(overlay.png) repeat;
+	height:100%;
+	left:0;
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:98;
+}
+
+/********************
+    - 12. Logo -
+********************/
+.logo {
+	font-size:30px;
+	margin-bottom:70px;
+}
+
+/************************
+    - 13. Countdown -
+************************/
+.countdown-row {
+	display:block;
+	text-align:center;
+}
+
+.countdown-section {
+	border-left:1px dotted #dadada;
+	border-color:rgba(218,218,218,0.8);
+	color:#dadada;
+	display:inline-block;
+	font-size:12px;
+	line-height:12px;
+	padding:3px 12px 10px;
+	text-align:center;
+	text-transform:uppercase;
+	width:25%;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+			box-sizing:border-box;
+}
+
+.countdown-section:first-child {	
+	border-left:0;
+}
+
+.countdown-amount {
+	color:#fff;
+	display:block;
+	font-weight:700;
+	font-size:60px;
+	line-height:1;
+	padding-bottom:5px;
+}
+
+/*************************
+    - 14. Newsletter -
+*************************/
+#newsletter {
+	margin:0 auto;
+	max-width:448px;	
+}
+
+#newsletter-form {
+	position:relative;
+}
+
+#newsletter-form .form-field {
+	margin-right:150px;
+}
+
+#newsletter-form .form-submit {
+	height:42px;
+	position:absolute;
+	right:0;
+	top:0;
+	width:150px;
+}
+
+#email, #submit {
+	display:block;
+	height:42px;
+	width:100%;
+}
+
+#email {
+	border-right:0;
+	-webkit-border-radius:3px 0 0 3px;
+	   -moz-border-radius:3px 0 0 3px;
+			border-radius:3px 0 0 3px;
+}
+
+#submit {
+	border:0;
+	-webkit-border-radius:0 3px 3px 0;
+	   -moz-border-radius:0 3px 3px 0;
+			border-radius:0 3px 3px 0;
+}
+
+/*********************
+    - 15. Social -
+*********************/
+.social {
+	margin:28px 0 0;
+}
+
+.social ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+.social li {
+	display:inline-block;
+	margin:4px;
+}
+
+/***************************
+    - 16. Modal toggle -
+***************************/
+#main .modal-toggle {
+	position:fixed;
+	display:block;
+	top:50%;
+	right:100px;
+	width:34px;
+	height:34px;
+	vertical-align:middle;
+	color:#fff;
+	border:2px solid #fff;
+	text-align:center;
+	-webkit-border-radius:999px;
+	   -moz-border-radius:999px;
+	   		border-radius:999px;
+	-webkit-transition:all 0.3s;
+	   -moz-transition:all 0.3s;
+			transition:all 0.3s;
+	-webkit-transform:translateY(-50%);
+	   -moz-transform:translateY(-50%);
+		-ms-transform:translateY(-50%);
+		 -o-transform:translateY(-50%);
+			transform:translateY(-50%);
+}
+
+#main .modal-toggle i {
+	font-size:22px;
+	line-height:34px;
+}
+
+#main .modal-toggle:hover {
+	right:98px;
+	background-color:#fff;
+	width:40px;
+	height:40px;
+}
+
+#main .modal-toggle:hover i {
+	font-size:28px;
+	line-height:40px;
+}
+
+/****************************
+    - 17. Modal / About -
+****************************/
+#modal .title {
+	margin-bottom:42px;
+}
+
+#modal {
+	background:#000;
+	background:rgba(0,0,0,0.9);
+	display:none;
+	left:0;
+	min-height:100%;
+	position:absolute;
+	right:0;
+	top:0;
+	z-index:997;
+}
+
+#modal .inner {
+	max-width:612px;
+}
+
+#modal .modal-toggle {
+	margin-bottom:28px;
+	text-align:center;
+}
+
+#modal #modal-close i {
+	font-size:20px;
+	line-height:20px;
+}
+
+/********************
+    - 18. No JS -
+********************/
+.no-js #timer,
+.no-js .modal-toggle,
+.no-js .page-loader {
+	display:none;
+}

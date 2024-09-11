@@ -1,0 +1,58 @@
+﻿@page
+@model JurayMailService.Web.Areas.User.Pages.Servers.IndexModel
+@{
+}
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">SERVER MANAGER</h3>
+         
+    </div>
+    <!-- /.card-header -->
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>
+                            Name
+                        </th>
+
+                        <th>Email</th>
+
+
+                    </tr>
+                </thead>
+
+                @{
+                    int sn = 0;
+                }
+                <tbody>
+                    @foreach (var item in Model.Servers)
+                    {
+                        <tr>
+
+                            <td>
+                                @{
+                                    sn++;
+                                }
+                                @sn
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SenderName)
+
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SenderEmail)
+
+                            </td>
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

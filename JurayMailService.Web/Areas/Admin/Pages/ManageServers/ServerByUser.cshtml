@@ -1,0 +1,60 @@
+﻿@page
+@model JurayMailService.Web.Areas.Admin.Pages.ManageServers.ServerByUserModel
+@{
+}
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">SERVER MANAGER</h3>
+        <a asp-page="./AddServer" asp-route-id="@Model.UserId" class="btn bg-gradient-warning btn-sm" style="float:right;">Add Server</a>
+
+    </div>
+    <!-- /.card-header -->
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>
+                            Name
+                        </th>
+
+                        <th>Email</th>
+
+
+                    </tr>
+                </thead>
+
+                @{
+                    int sn = 0;
+                }
+                <tbody>
+                    @foreach (var item in Model.Servers)
+                    {
+                        <tr>
+
+                            <td>
+                                @{
+                                    sn++;
+                                }
+                                @sn
+                            </td>
+                            <td>
+                                <a asp-page="./UpdateServer" asp-route-id="@item.Id">
+                                    @Html.DisplayFor(modelItem => item.SenderName)
+                                    </a>
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SenderEmail)
+
+                            </td>
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

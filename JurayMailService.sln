@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JurayMailService.Web", "JurayMailService.Web\JurayMailService.Web.csproj", "{801469D0-093E-4A02-B7C8-31B436207C25}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\Application\Application.csproj", "{F728C444-C144-433C-B13D-0309F86F5F05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{9451AACE-E99C-4C3E-A068-AD4BABA514EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{86C917FD-113D-4CDA-BC6A-D1FC9E71FF18}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostmarkEmailService", "src\PostmarkEmailService\PostmarkEmailService.csproj", "{A8B66798-2AA8-42F0-A542-08C44440E2AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerService", "src\WorkerService\WorkerService.csproj", "{43B0FCE3-82DE-4107-AE0E-2BBA869A15B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{801469D0-093E-4A02-B7C8-31B436207C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{801469D0-093E-4A02-B7C8-31B436207C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{801469D0-093E-4A02-B7C8-31B436207C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{801469D0-093E-4A02-B7C8-31B436207C25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F728C444-C144-433C-B13D-0309F86F5F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F728C444-C144-433C-B13D-0309F86F5F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F728C444-C144-433C-B13D-0309F86F5F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F728C444-C144-433C-B13D-0309F86F5F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9451AACE-E99C-4C3E-A068-AD4BABA514EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9451AACE-E99C-4C3E-A068-AD4BABA514EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9451AACE-E99C-4C3E-A068-AD4BABA514EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9451AACE-E99C-4C3E-A068-AD4BABA514EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86C917FD-113D-4CDA-BC6A-D1FC9E71FF18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86C917FD-113D-4CDA-BC6A-D1FC9E71FF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86C917FD-113D-4CDA-BC6A-D1FC9E71FF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86C917FD-113D-4CDA-BC6A-D1FC9E71FF18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8B66798-2AA8-42F0-A542-08C44440E2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B66798-2AA8-42F0-A542-08C44440E2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B66798-2AA8-42F0-A542-08C44440E2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B66798-2AA8-42F0-A542-08C44440E2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43B0FCE3-82DE-4107-AE0E-2BBA869A15B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43B0FCE3-82DE-4107-AE0E-2BBA869A15B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43B0FCE3-82DE-4107-AE0E-2BBA869A15B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43B0FCE3-82DE-4107-AE0E-2BBA869A15B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {333D7F4B-85C2-45FE-8B86-6451A8ED9642}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,155 @@
+﻿@page
+@model JurayMailService.Web.Areas.User.Pages.Groups.InfoModel
+@{
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="card-title">EMAIL GROUP MANAGEMENT</h6>
+
+
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <dl class="row">
+
+
+                                        <dt class="col-sm-2">
+                                            @Html.DisplayNameFor(model => model.EmailGroup.Name)
+                                        </dt>
+                                        <dd class="col-sm-10">
+                                            @Html.DisplayFor(model => model.EmailGroup.Name)
+                                        </dd>
+
+
+                                        <dt class="col-sm-2">
+                                            Emails
+                                        </dt>
+                                        <dd class="col-sm-10">
+                                            @Model.EmailGroup.Emails.Count()
+                                        </dd>
+
+
+                                    </dl>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">EMAILS IN GROUP</h3>
+
+                    </div>
+                    <!-- /.card-header -->
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>
+                                            Name
+                                        </th>
+
+                                        <th>Emails</th>
+                                        <th>Phone</th>
+
+
+                                    </tr>
+                                </thead>
+
+                                @{
+                                    int sn = 0;
+                                }
+                                <tbody>
+                                    @foreach (var item in Model.EmailLists.OrderByDescending(x => x.Name))
+                                    {
+                                        <tr>
+                                            <td>
+                                                @{
+                                                    sn++;
+                                                }
+                                                @sn
+                                            </td>
+                                            <td>
+                                                <a asp-page="./Info" asp-route-id="@item.Id">
+                                                    @Html.DisplayFor(modelItem => item.Name)
+                                                </a>
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Email)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card-body">
+                <div class="card card-default">
+                    <div class="card-header">
+                        <h3 class="card-title">Upload Email Contacts</h3>
+
+                    </div>
+                    <!-- /.card-header -->
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form method="post" enctype="multipart/form-data">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <input asp-for="GroupId" value="@Model.EmailGroup.Id" type="hidden" />
+
+
+                                    <div class="form-group">
+                                        <label class="control-label">Excel File With the List</label><br />
+                                        <input type="file" class="control-label" asp-for="ExcelFile" required="required" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Upload" class="btn btn-primary" />
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+                <a href="javascript:history.back()" class="btn bg-gradient-warning btn-sm">Back</a>
+                <a asp-page="./Update" asp-route-id="@Model.EmailGroup.Id" class="btn btn-danger btn-sm">Update</a>
+            </div>
+        </div>
+    </div>
+</div>

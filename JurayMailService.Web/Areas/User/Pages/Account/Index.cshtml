@@ -1,0 +1,42 @@
+﻿@page
+@model JurayMailService.Web.Areas.User.Pages.Account.IndexModel
+@{
+}
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">
+            DASHBOARD
+        </h3>
+
+
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <div class="row">
+
+            <div class="col-lg-6 col-6 dashboard-1">
+                <!-- small box -->
+                <div class="small-box bg-primary">
+                    <div class="inner">
+                        <h3>@Model.DashboardDto.AllProjects</h3>
+
+                        <p>Total Projects</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-6 dashboard-1">
+                <!-- small box -->
+                <div class="small-box bg-dark">
+                    <div class="inner">
+                        <h3>@Model.DashboardDto.AllEmails</h3>
+
+                        <p>Emails</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

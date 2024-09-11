@@ -1,0 +1,29 @@
+a, 
+h1.title > span,
+.row h2 i,
+.social a:hover,
+.modal-toggle i:hover,
+#bg-video-controls i:hover {
+	color:#ff5744;
+}
+
+button, input[type="submit"],
+button:hover, button:focus,
+input[type="submit"]:focus, input[type="submit"]:hover,
+.form-field span.errors,
+.bounce1, .bounce2, .bounce3 {
+	background:#ff5744;
+}
+
+button, input[type="submit"],
+.form-field span.error {
+	background:rgba(255, 87, 68, 0.8);
+}
+
+.form-field span.error {
+	border:1px solid #ff5744;
+}
+
+.page-loader .progress {
+	border-left-color:#ff5744;
+}

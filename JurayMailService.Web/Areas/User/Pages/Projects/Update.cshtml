@@ -1,0 +1,66 @@
+﻿@page
+@model JurayMailService.Web.Areas.User.Pages.Projects.UpdateModel
+@{
+}
+
+<div class="card card-default">
+    <div class="card-header">
+        <h3 class="card-title">UPDATE PROJECT</h3>
+
+    </div>
+    <!-- /.card-header -->
+
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="EmailProject.AppUserId" />
+                    <input type="hidden" asp-for="EmailProject.Id" />
+
+                    <div class="form-group">
+                        <label asp-for="EmailProject.Name" class="control-label"></label>
+                        <input asp-for="EmailProject.Name" class="form-control" id="upper1" oninput="myUppercase('upper1')" />
+                        <span asp-validation-for="EmailProject.Name" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label asp-for="EmailProject.Subject" class="control-label"></label>
+                        <input asp-for="EmailProject.Subject" class="form-control" />
+                        <span asp-validation-for="EmailProject.Subject" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EmailProject.Date" class="control-label"></label>
+                        <input asp-for="EmailProject.Date" class="form-control" />
+                        <span asp-validation-for="EmailProject.Date" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EmailProject.Template" class="control-label">Template (Note: '$$name$$' add these any where you want the fullname of the email holder to be)</label>
+                        <textarea asp-for="EmailProject.Template" class="form-control"></textarea>
+                        <span asp-validation-for="EmailProject.Template" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Add" class="btn btn-primary" />
+                        <a asp-page="./Index" class="btn bg-gradient-warning btn-sm" style="float:right;">Back</a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- /.row -->
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer">
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

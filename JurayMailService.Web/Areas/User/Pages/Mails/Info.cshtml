@@ -1,0 +1,176 @@
+﻿@page
+@model JurayMailService.Web.Areas.User.Pages.Mails.InfoModel
+@{
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="card-title">SENT EMAIL DETAILS</h6>
+
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h6 class="card-title">Details</h6>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <dl class="row">
+                                                <dt class="col-sm-2">
+                                                    Email
+                                                </dt>
+                                                <dd class="col-sm-10">
+                                                    @if(Model.MailInfoDto.EmailSendingStatus.EmailList != null) { 
+                                                    @Html.DisplayFor(model => model.MailInfoDto.EmailSendingStatus.EmailList.Name)
+                                                        
+                                                    <span>
+                                                        (@Html.DisplayFor(model => model.MailInfoDto.EmailSendingStatus.EmailList.Email))
+                                                    </span>
+
+                                                }
+                                                </dd>
+
+
+                                                <dt class="col-sm-2">
+                                                    @Html.DisplayNameFor(model => model.MailInfoDto.EmailSendingStatus.Group)
+                                                </dt>
+                                                <dd class="col-sm-10">
+                                                    @Html.DisplayFor(model => model.MailInfoDto.EmailSendingStatus.Group)
+                                                </dd>
+
+
+                                                <dt class="col-sm-2">
+                                                    Email Project
+                                                </dt>
+                                                <dd class="col-sm-10">
+                                                    @if (Model.MailInfoDto.EmailSendingStatus.EmailProject != null)
+                                                    {
+                                                        @Html.DisplayFor(model => model.MailInfoDto.EmailSendingStatus.EmailProject.Name)
+                                                    }
+                                                    </dd>
+
+
+                                                <dt class="col-sm-2">
+                                                    @Html.DisplayNameFor(model => model.MailInfoDto.EmailSendingStatus.SubmittedDate)
+                                                </dt>
+                                                <dd class="col-sm-10">
+                                                    @Html.DisplayFor(model => model.MailInfoDto.EmailSendingStatus.SubmittedDate)
+                                                </dd>
+
+
+                                                <dt class="col-sm-2">
+                                                    @Html.DisplayNameFor(model => model.MailInfoDto.EmailSendingStatus.SentDate)
+                                                </dt>
+                                                <dd class="col-sm-10">
+                                                    @Html.DisplayFor(model => model.MailInfoDto.EmailSendingStatus.SentDate)
+                                                </dd>
+
+
+                                                <dt class="col-sm-2">
+                                                    @Html.DisplayNameFor(model => model.MailInfoDto.EmailSendingStatus.SendingStatus)
+                                                </dt>
+                                                <dd class="col-sm-10">
+                                                    @Html.DisplayFor(model => model.MailInfoDto.EmailSendingStatus.SendingStatus)
+                                                </dd>
+
+
+                                                <dt class="col-sm-2">
+                                                    @Html.DisplayNameFor(model => model.MailInfoDto.EmailSendingStatus.Retries)
+                                                </dt>
+                                                <dd class="col-sm-10">
+                                                    @Html.DisplayFor(model => model.MailInfoDto.EmailSendingStatus.Retries)
+                                                </dd>
+
+
+                                                <dt class="col-sm-2">
+                                                    @Html.DisplayNameFor(model => model.MailInfoDto.EmailSendingStatus.Log)
+                                                </dt>
+                                                <dd class="col-sm-10">
+                                                    @Html.DisplayFor(model => model.MailInfoDto.EmailSendingStatus.Log)
+                                                </dd>
+
+
+                                                <dt class="col-sm-2">
+                                                    @Html.DisplayNameFor(model => model.MailInfoDto.EmailSendingStatus.MessageId)
+                                                </dt>
+                                                <dd class="col-sm-10">
+                                                    @Html.DisplayFor(model => model.MailInfoDto.EmailSendingStatus.MessageId)
+                                                </dd>
+
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">RESPONSE STATUS</h3>
+
+            </div>
+            <!-- /.card-header -->
+
+            <div class="card-body">
+                <div class="row">
+
+                    @foreach (var retunsdata in Model.MailInfoDto.EmailResponseStatusList)
+                    {
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6>Record Type</h6>
+                                    <p>@retunsdata.RecordType</p>
+                                    <hr style="margin:0 !important;"/>
+                                    <h6>Message Id</h6>
+                                    <p>@retunsdata.MessageId</p>
+                                    <hr style="margin:0 !important;" />
+
+                                    <h6>Date</h6>
+                                    <p>@retunsdata.SentDate</p>
+                                    <hr style="margin:0 !important;" />
+                                    <h6>Email</h6>
+                                    @if(retunsdata.EmailList != null) { 
+                                    <p>@retunsdata.EmailList.Name (@retunsdata.EmailList.Email)</p>
+                                    }
+                                    <hr style="margin:0 !important;" />
+
+
+                                    <h6>Log</h6>
+                                    <p>@Html.Raw(retunsdata.Log)</p>
+                                    <hr style="margin:0 !important;" />
+
+                                </div>
+
+                            </div>
+                        </div>
+                            }
+                        
+                    </div>
+              
+            </div>
+        </div>
+
+    </div>
+</div>

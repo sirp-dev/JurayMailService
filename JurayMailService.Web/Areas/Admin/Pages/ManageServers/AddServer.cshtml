@@ -1,0 +1,67 @@
+﻿@page
+@model JurayMailService.Web.Areas.Admin.Pages.ManageServers.AddServerModel
+@{
+}
+
+<div class="card card-default">
+    <div class="card-header">
+        <h3 class="card-title">ADD SERVER</h3>
+
+    </div>
+    <!-- /.card-header -->
+
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Server.UserId" value="@Model.UserId" />
+
+                    <div class="form-group">
+                        <label asp-for="Server.ApiKey" class="control-label"></label>
+                        <input asp-for="Server.ApiKey" class="form-control" />
+                        <span asp-validation-for="Server.ApiKey" class="text-danger"></span>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label asp-for="Server.SenderName" class="control-label"></label>
+                        <input asp-for="Server.SenderName" class="form-control" />
+                        <span asp-validation-for="Server.SenderName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Server.SenderEmail" class="control-label"></label>
+                        <input asp-for="Server.SenderEmail" class="form-control" />
+                        <span asp-validation-for="Server.SenderEmail" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Server.Disable" class="control-label"></label>
+                        <input asp-for="Server.Disable" />
+                        <span asp-validation-for="Server.Disable" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="submit" value="Add" class="btn btn-primary" />
+                        <a asp-page="./Index" class="btn bg-gradient-warning btn-sm" style="float:right;">Back</a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- /.row -->
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer">
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
